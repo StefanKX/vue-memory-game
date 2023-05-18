@@ -1,7 +1,7 @@
 <template>
   <div class="board">
     <span>Cards not Matched</span>
-    <h2>{{ nonMatchedPairs }}</h2>
+    <h2 class="ml-2">{{ nonMatchedPairs }}</h2>
   </div>
 </template>
 
@@ -16,13 +16,11 @@ const nonMatchedPairs = computed(() => state.nonMatchedPairs)
 
 <style scoped>
 .board {
-  width: 120px;
-  height: 100px;
+  display: flex;
+  flex-direction: row;
   padding: 10px;
   background-color: #bbada0;
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   color: #eae0d1;
@@ -38,6 +36,7 @@ span {
 
 h2 {
   color: #fff;
+  padding-left: 10px;
 }
 @media screen and (max-width: 450px) {
   .board {

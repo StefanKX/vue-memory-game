@@ -1,15 +1,12 @@
 <template>
-  <h1 class="logo">
-    <a href="https://github.com/leftstick/vue-memory-game" target="_blank">Memory</a>
-  </h1>
+  <h1 class="logo">LEGENDÄR - von Schulzeit bis Hochzeit</h1>
 </template>
 
 <style scoped>
 .logo {
-  width: 160px;
-  height: 100px;
-  line-height: 90px;
-  padding: 5px;
+  display: flex;
+  height: 50px;
+  padding: 10px 10px 10px 10px;
   border-radius: 5px;
   background-color: #5979ac;
   color: #fff;
@@ -37,7 +34,7 @@ a {
     width: 110px;
   }
   a {
-    font-size: 18px;
+    font-size: 12px;
   }
 }
 </style>
