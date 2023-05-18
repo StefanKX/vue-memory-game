@@ -1,7 +1,7 @@
 <template>
   <div class="score-board">
-    <GameLogo />
     <ProgressBar />
+    <GameLogo />
     <GameScore />
   </div>
 </template>
