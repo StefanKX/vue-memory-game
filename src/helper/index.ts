@@ -31,6 +31,7 @@ export function saveHighestRecord(score: number): void {
 
 export function shuffleAllCards(): ICard[] {
   const newCards: ICard[] = [...ALL_CARD_NAMES, ...ALL_CARD_NAMES].map((name) => ({
+    number: 0, //apply after shuffle
     id: id(8),
     flipped: false,
     name
@@ -42,5 +43,8 @@ export function shuffleAllCards(): ICard[] {
     newCards[i - 1] = newCards[j]
     newCards[j] = x
   }
-  return newCards
+
+  return newCards.map((card, index) => {
+    return { ...card, number: index + 1 }
+  })
 }

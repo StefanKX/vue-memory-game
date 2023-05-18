@@ -1,8 +1,9 @@
 import type { ALL_CARD_NAMES, IStatus } from './constants'
 
-export type ICardName = typeof ALL_CARD_NAMES[number]
+export type ICardName = (typeof ALL_CARD_NAMES)[number]
 
 export interface ICard {
+  number: number
   id: string
   flipped: boolean
   name: ICardName

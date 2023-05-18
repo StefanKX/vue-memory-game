@@ -11,6 +11,8 @@
       <img v-if="card.name === '8'" class="front" src="../../assets/8.png" />
 
       <img class="back" src="../../assets/back.png" />
+      <!-- ToDo: fix number showing on front -->
+      <h2 class="card-number">{{ card.number }}</h2>
     </div>
   </div>
 </template>
@@ -56,6 +58,15 @@ const doFlip = () => {
   height: 100%;
   transition: transform 1s;
   transform-style: preserve-3d;
+}
+.card-number {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  -webkit-text-stroke: 2px black;
+  backface-visibility: hidden;
 }
 
 .card.flipped {
