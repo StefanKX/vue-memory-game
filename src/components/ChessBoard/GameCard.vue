@@ -12,7 +12,7 @@
 
       <img class="back" src="../../assets/back.png" />
       <!-- ToDo: fix number showing on front -->
-      <h2 class="card-number">{{ card.number }}</h2>
+      <h2 class="number">{{ card.number }}</h2>
     </div>
   </div>
 </template>
@@ -59,18 +59,18 @@ const doFlip = () => {
   transition: transform 1s;
   transform-style: preserve-3d;
 }
-.card-number {
+.card .number {
   position: absolute;
   top: 25px;
   left: 25px;
   color: rgb(0, 0, 0);
   font-size: 40px;
   -webkit-text-stroke: 2px black;
-  backface-visibility: hidden;
 }
 
 .card.flipped {
   transform: rotateY(180deg);
+  backface-visibility: hidden;
 }
 
 .card img {
