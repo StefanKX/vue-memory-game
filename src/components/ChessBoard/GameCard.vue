@@ -37,8 +37,8 @@ const doFlip = () => {
 
 <style scoped>
 .container {
-  width: 100px;
-  height: 121px;
+  width: 200px;
+  height: 200px;
   margin-right: 3px;
   cursor: pointer;
   position: relative;

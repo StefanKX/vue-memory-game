@@ -40,8 +40,8 @@ body {
 
 <style scoped>
 .game-panel {
-  width: 450px;
-  height: 670px;
+  width: 1700px;
+  height: 900px;
   border: 4px solid #bdbdbd;
   border-radius: 2px;
   background-color: #faf8ef;
