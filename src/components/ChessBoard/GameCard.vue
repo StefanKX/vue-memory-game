@@ -1,16 +1,8 @@
 <template>
   <div class="container" @click="doFlip">
     <div class="card" :class="{ flipped: card.flipped }">
-      <img v-if="card.name === '1'" class="front" src="../../assets/1.png" />
-      <img v-if="card.name === '2'" class="front" src="../../assets/2.png" />
-      <img v-if="card.name === '3'" class="front" src="../../assets/3.png" />
-      <img v-if="card.name === '4'" class="front" src="../../assets/4.png" />
-      <img v-if="card.name === '5'" class="front" src="../../assets/5.png" />
-      <img v-if="card.name === '6'" class="front" src="../../assets/6.png" />
-      <img v-if="card.name === '7'" class="front" src="../../assets/7.png" />
-      <img v-if="card.name === '8'" class="front" src="../../assets/8.png" />
-
       <img class="back" src="../../assets/back.png" />
+      <img class="front" :src="card.name" />
       <!-- ToDo: fix number showing on front -->
       <h2 class="number">{{ card.number }}</h2>
     </div>
@@ -79,6 +71,7 @@ const doFlip = () => {
   width: 100%;
   position: absolute;
   backface-visibility: hidden;
+  border-radius: 25px;
 }
 
 .card .back {
